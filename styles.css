@@ -1,4 +1,4 @@
-* {
+:root {
   --primary: #7a9e7b;
   --secundary: #85c7c7;
   --tertiary: #f7c7ba;
@@ -7,16 +7,20 @@
 }
 
 body {
-  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   color: var(--font);
-  font-family: 'Kaisei HarunoUmi', serif;
+  background-color: var(--primary);
+  font-family: 'PT Serif', serif;
 }
 
 .container {
   width: 100%;
   max-width: 320px;
   margin: auto;
-  border-radius: 40px;
+  border-radius: 30px;
   border: 4px solid var(--font);
 }
 
@@ -27,16 +31,16 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 24px;
   border-bottom: 2px solid var(--font);
 }
 
 .header__row--subtitle {
-  padding: 12px 20px;
+  padding: 12px;
 }
 
 .header__title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -53,5 +57,61 @@ body {
 
 .header__subtitle {
   font-family: 'Vidaloka', serif;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.2px;
+}
+
+.main {
+  padding: 16px 24px;
+}
+
+.main__action {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.main__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  padding: 2px;
+  border: 2px solid var(--font);
+  border-radius: 50%;
+}
+
+.main__arrow > svg {
+  fill: var(--font);
+}
+
+.main__action > span {
+  font-weight: 700;
+}
+
+.main__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 16px 0;
+}
+
+.main__date {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.main__paragraph {
+  margin: 16px 0;
+  font-size: 0.75rem;
+  line-height: 22px;
+}
+
+.main__paragraph--first::first-letter {
+  display: inline-block;
+  margin: 8px 8px 8px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
